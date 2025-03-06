@@ -48,7 +48,10 @@
 }
 @media screen and(max-width:600px) {
     #contact,footer{
-        height: 40vh;
+        height: auto;
+        padding: 1rem 0; /* Add spacing */
+        text-align: center;
+        display: block;
     }
     #profile{
         height: 83vh;
@@ -60,13 +63,18 @@
     footer nav{
         height: fit-content;
         margin-bottom: 2rem;
+        flex-direction: column; /* Stack elements */
+        align-items: center;
     }
     .about-container,.contact-info-upper-container,.btn-container {
         flex-wrap: wrap;
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
 
     }
     .contact-info-container{
         margin: 0;
+        flex-direction: column;
     }
     .contact-info-container p,.nav-links li a{
         font-size: 1rem;
@@ -81,7 +89,36 @@
         flex-direction: column;
         gap:0.5rem;
         text-align: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap; 
+        display: block;
     }
+    .nav-links li {
+        margin: 0.5rem 0;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap; 
+        list-style: none;
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        display: block;
+        padding: 0.5rem;
+    }
+    .nav-links-container {
+        display: flex;
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center;
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    
     .section_pic-container{
         width: auto;
         height: 46vh;
